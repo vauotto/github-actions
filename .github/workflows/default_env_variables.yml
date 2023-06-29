@@ -1,0 +1,21 @@
+name: showing default env_var
+
+on: 
+  workflow_dispatch:
+
+jobs: 
+    job1:
+      runs-on: ubuntu-latest
+      steps:
+        - run: env 
+        
+    job2: 
+      runs-on: windows-latest
+      steps:
+        - run: env
+
+    job3: 
+      runs-on: macos-latest 
+      steps:
+        - run: env
+     
