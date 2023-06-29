@@ -1,0 +1,29 @@
+name: artifacts
+
+on: 
+  workflow_dispatch:
+
+jobs: 
+    create_artifact:
+      name: upload artifact
+      runs-on: ubuntu-latest
+      steps:
+        - name: gerando arquivo local  
+          run: echo "sou um valor que será persistido e poderá ser acessado por outros jobs nesse workflow run" >> file.txt 
+
+        - uses: actions/upload-artifact@v2
+          with:
+            name: file
+            path: file.txt
+            retation-days: 10
+    
+    read_artifact:
+      name: download artifact
+      runs-on: ubuntu-latest
+      needs: create_artifact
+      steps:
+        - uses: actions/download-artifact@v2
+          with:
+            name: file
+
+        - run: cat file.txt

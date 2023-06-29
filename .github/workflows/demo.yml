@@ -1,4 +1,4 @@
-name: Basic Workflow
+name: exemplo inicial
 
 on: 
   workflow_dispatch:
