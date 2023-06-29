@@ -1,0 +1,34 @@
+name: sharing data
+
+on: 
+  workflow_dispatch:
+
+jobs: 
+    job1:
+      runs-on: ubuntu-latest
+
+      outputs:
+        output1: ${{ steps.source_step.outputs.var2 }}
+
+      steps:
+        - name: "set env var"
+          run: echo "var1=foo" >> $GITHUB_ENV
+        
+        - name: "create output var"
+          id: source_step
+          run: |
+            echo "::set-output name=var2::bar"
+        
+        - name: "get values"
+          run: |
+            echo "env var: ${{ env.var1 }}"
+            echo "output var: ${{ steps.source_step.outputs.var2 }}"
+        
+    job2:
+      runs-on: ubuntu-latest
+      needs: job1
+
+      steps:
+        - run: |
+            echo "output from another job: ${{ needs.job1.outputs.output1 }}"
+        
