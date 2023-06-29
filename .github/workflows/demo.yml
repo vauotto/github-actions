@@ -1,11 +1,10 @@
 name: Basic Workflow
 
 on: 
-  push:
-    branches: [ "main" ]
+  workflow_dispatch:
   
-  pull_request:
-    branches: ["main"]
+env: 
+  global_var: "sou uma variável global"
 
 jobs: 
     job1:
@@ -14,7 +13,7 @@ jobs:
       steps:
         - name: escreve x
           run: echo "x"
-    
+        
     job2: 
       needs: job1 
       runs-on: ubuntu-latest
@@ -31,6 +30,22 @@ jobs:
      
     independent-job: 
       runs-on: ubuntu-latest
-      steps:
-        - name: escreve a
-          run: echo "a"
+      steps: 
+        - name: atribuir valor a variável dinamica
+          run: echo "dynamic_var=bla" >> $GITHUB_ENV
+
+        - name: escreve o valor das variáveis
+          run: |
+            echo "a"
+            echo "${{ env.global_var }}"
+            echo "${{ env.job_var }}"
+            echo "${{ env.step_var }}"
+            echo "${{ env.dynamic_var }}"
+        
+          env: 
+            step_var: "sou uma var do step"
+      
+      env:
+        job_var: "sou uma var do job"
+      
+      
