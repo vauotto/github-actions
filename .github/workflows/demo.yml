@@ -1,0 +1,36 @@
+name: Basic Workflow
+
+on: 
+  push:
+    branches: [ "main" ]
+  
+  pull_request:
+    branches: ["main"]
+
+jobs: 
+    job1:
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: escreve x
+          run: echo "x"
+    
+    job2: 
+      needs: job1 
+      runs-on: ubuntu-latest
+      steps:
+        - name: escreve y 
+          run:  echo "y"
+
+    job3: 
+      needs: [job1, job2]
+      runs-on: ubuntu-latest
+      steps:
+        - name: escreve z
+          run: echo "z"
+     
+    independent-job: 
+      runs-on: ubuntu-latest
+      steps:
+        - name: escreve a
+          run: echo "a"
