@@ -11,6 +11,9 @@ on:
 env:
     GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
+permissions:
+    contents: write
+    
 jobs: 
     job1:
         runs-on: ubuntu-latest
