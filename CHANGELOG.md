@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.1.0](https://github.com/vauotto/github-actions/compare/v1.0.0...v1.1.0) (2023-07-07)
+
+
+### Features
+
+* update readme (testing version generation) ([ecae2f7](https://github.com/vauotto/github-actions/commit/ecae2f76af7df7c37f9d161bbe526eb9d330fe29))
+
 # 1.0.0 (2023-07-07)
 
 
