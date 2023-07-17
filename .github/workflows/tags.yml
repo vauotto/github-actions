@@ -1,0 +1,28 @@
+name: printing tags
+
+on: 
+  push: 
+    branches: 
+      ["main"]
+    tags:
+      - '*'
+
+env:
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+permissions:
+  contents: write
+    
+jobs: 
+  print_tag:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get latest version of code
+        uses: actions/checkout@v3
+
+      - name: Printing tags
+        run: |
+            echo "Tag name from GITHUB_REF_NAME: $GITHUB_REF_NAME"
+            echo "Tag name from github.ref_name: ${{  github.ref_name }}"
+        
