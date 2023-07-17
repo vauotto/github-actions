@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.2.0](https://github.com/vauotto/github-actions/compare/v1.1.0...v1.2.0) (2023-07-17)
+
+
+### Features
+
+* trying to print tags ([bd73908](https://github.com/vauotto/github-actions/commit/bd73908a6f896c7de89bef29d70da63a7a8926c3))
+
 # [1.1.0](https://github.com/vauotto/github-actions/compare/v1.0.0...v1.1.0) (2023-07-07)
 
 
