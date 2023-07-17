@@ -2,8 +2,6 @@ name: printing tags
 
 on: 
   push: 
-    branches: 
-      ["main"]
     tags:
       - '*'
 
