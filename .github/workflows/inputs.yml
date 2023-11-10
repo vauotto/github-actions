@@ -1,0 +1,40 @@
+name: testing inputs
+on:
+  workflow_call:
+    inputs:
+      skip:
+        description: "set to true if you want to skip task"
+        type: string
+        default: false
+        required: false
+      
+      branchname:
+        description: 'Name of the branch'
+        type: string
+        required: true
+      
+
+
+  workflow_dispatch:
+    inputs:
+      skip:
+        description: "set to true if you want to skip task"
+        type: string
+        default: false
+        required: false
+      
+      branchname:
+        description: 'Name of the branch for which Scan is to be executed'
+        type: string
+        required: true
+        
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: testing inputs
+        if: inputs.skip == 'false'
+        run: |
+          echo: ${{ inputs.skip }}
+          echo: ${{ inputs.branchname }}

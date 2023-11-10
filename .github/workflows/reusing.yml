@@ -1,0 +1,10 @@
+name: testing inputs
+on:
+    workflow_dispatch:
+
+jobs:
+  test:
+    uses: ./.github/workflows/inputs.yml
+    with:
+        skip: false
+        branchname: ${GITHUB_REF##*/}
