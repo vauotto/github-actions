@@ -27,7 +27,7 @@ on:
         description: 'Name of the branch for which Scan is to be executed'
         type: string
         required: true
-        
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -36,5 +36,5 @@ jobs:
       - name: testing inputs
         if: inputs.skip == 'false'
         run: |
-          echo: ${{ inputs.skip }}
-          echo: ${{ inputs.branchname }}
+          echo "${{ inputs.skip }}"
+          echo "${{ inputs.branchname }}"
