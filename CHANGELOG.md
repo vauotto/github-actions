@@ -1,5 +1,13 @@
 # Semantic Versioning Changelog
 
+# [1.3.0](https://github.com/vauotto/github-actions/compare/v1.2.0...v1.3.0) (2024-02-15)
+
+
+### Features
+
+* fake feature ([0e71d02](https://github.com/vauotto/github-actions/commit/0e71d02d2b8e3ddb3c88ee68a13bcd4477754a49))
+* fake feature 2 ([485126e](https://github.com/vauotto/github-actions/commit/485126ec0177c5a70d1aee637e0a5f802b3df1bc))
+
 # [1.2.0](https://github.com/vauotto/github-actions/compare/v1.1.0...v1.2.0) (2023-07-17)
 
 
