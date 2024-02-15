@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.4.0](https://github.com/vauotto/github-actions/compare/v1.3.0...v1.4.0) (2024-02-15)
+
+
+### Features
+
+* move .releaserc ([256d8e9](https://github.com/vauotto/github-actions/commit/256d8e9d8cadf004782d21b8049632681e3d4487))
+
 # [1.3.0](https://github.com/vauotto/github-actions/compare/v1.2.0...v1.3.0) (2024-02-15)
 
 
