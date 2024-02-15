@@ -24,6 +24,9 @@ jobs:
 
       - name: escreve x
         run: echo "x"
+      
+      - name: move .releaserc file
+        run: mv .github/.releaserc .
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
