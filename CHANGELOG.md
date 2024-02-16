@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.5.8](https://github.com/vauotto/github-actions/compare/v1.5.7...v1.5.8) (2024-02-16)
+
+
+### Bug Fixes
+
+* update release ([105bd42](https://github.com/vauotto/github-actions/commit/105bd42384b7fc1b58195d34976e0662943a2583))
+
 ## [1.5.7](https://github.com/vauotto/github-actions/compare/v1.5.6...v1.5.7) (2024-02-16)
 
 
