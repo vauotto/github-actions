@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.5.3](https://github.com/vauotto/github-actions/compare/v1.5.2...v1.5.3) (2024-02-16)
+
+
+### Bug Fixes
+
+* trying to print next version 3 ([c2edc2f](https://github.com/vauotto/github-actions/commit/c2edc2f591f754e862357eee6143bd9d3b6ea027))
+
 ## [1.5.2](https://github.com/vauotto/github-actions/compare/v1.5.1...v1.5.2) (2024-02-16)
 
 
