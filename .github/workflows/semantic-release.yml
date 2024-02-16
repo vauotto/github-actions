@@ -39,7 +39,7 @@ jobs:
       - name: Dry run to get the next release version
         id: tag_version
         run: |
-          echo $(npx semantic-release --dry-run)
+          echo $(npx semantic-release --dry-run) | grep -oP 'The next release version is \K\S+' | awk '{print $1}' 
 
       - name: Run semantic-release
         run: npx semantic-release
