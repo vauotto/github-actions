@@ -39,16 +39,17 @@ jobs:
       - name: Dry run to get the next release version
         id: tag_version
         run: |
-          echo $(npx semantic-release --dry-run) | grep -oP 'The next release version is \K\S+' | awk '{print $1}' 
+          export NEXT_VERSION=$(npx semantic-release --dry-run) | grep -oP 'The next release version is \K\S+' | awk '{print $1}'
+          echo "next_version=${NEXT_VERSION}" >> $GITHUB_OUTPUT
 
       - name: Run semantic-release
         run: npx semantic-release
   
   publish:
     needs: release
-    if: ${{ needs.release.outputs.new_tag_version != '' }}
+    if: ${{ needs.release.outputs.next_version != '' }}
     runs-on: ubuntu-latest
     steps: 
       - name: Print version
-        run: echo ${{ needs.release.outputs.new_tag_version }}
+        run: echo ${{ needs.release.outputs.next_version }}
   
