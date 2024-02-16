@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.5.0](https://github.com/vauotto/github-actions/compare/v1.4.0...v1.5.0) (2024-02-16)
+
+
+### Features
+
+* trying to print version number ([6e68231](https://github.com/vauotto/github-actions/commit/6e682312e76d27d7ce47ec58fbfb7bcd706bb977))
+
 # [1.4.0](https://github.com/vauotto/github-actions/compare/v1.3.0...v1.4.0) (2024-02-15)
 
 
