@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.5.2](https://github.com/vauotto/github-actions/compare/v1.5.1...v1.5.2) (2024-02-16)
+
+
+### Bug Fixes
+
+* trying to print tag name 2 ([a3a7a6c](https://github.com/vauotto/github-actions/commit/a3a7a6c1d812e2670ab3a8e4f5064c96af4c2ea9))
+
 ## [1.5.1](https://github.com/vauotto/github-actions/compare/v1.5.0...v1.5.1) (2024-02-16)
 
 
