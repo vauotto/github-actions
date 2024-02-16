@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.5.7](https://github.com/vauotto/github-actions/compare/v1.5.6...v1.5.7) (2024-02-16)
+
+
+### Bug Fixes
+
+* change variable name ([2cd0127](https://github.com/vauotto/github-actions/commit/2cd0127c0e988111b31c43a753a543f86cfe2c16))
+
 ## [1.5.6](https://github.com/vauotto/github-actions/compare/v1.5.5...v1.5.6) (2024-02-16)
 
 
