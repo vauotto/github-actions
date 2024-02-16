@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
 
     outputs:
-      next_version: ${{ steps.release.outputs.next_version }}
+      output: ${{ steps.release.outputs.next_version }}
 
     steps:
       - name: Get latest version of code
@@ -42,7 +42,8 @@ jobs:
       - name: Dry run to get the next release version
         id: tag_version
         run: |
-          echo next_version=$(npx semantic-release --dry-run | grep -oP 'The next release version is \K\S+' | awk '{print $1}') >> "$GITHUB_OUTPUT"
+          export NEXT_TAG_VERSION=$(npx semantic-release --dry-run | grep -oP 'The next release version is \K\S+' | awk '{print $1}') 
+          echo "next_version=${NEXT_TAG_VERSION}" >> $GITHUB_OUTPUT
 
       - name: Run semantic-release
         run: npx semantic-release
@@ -52,5 +53,5 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Print version
-        run: echo ${{ needs.release.outputs.next_version  }}
+        run: echo ${{ needs.release.outputs.output }}
   
