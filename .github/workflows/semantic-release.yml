@@ -46,9 +46,10 @@ jobs:
   
   publish:
     needs: release
-    if: ${{ needs.release.outputs.next_version != '' }}
     runs-on: ubuntu-latest
     steps: 
       - name: Print version
-        run: echo ${{ needs.release.outputs.next_version }}
+        env:  
+          OUTPUT: ${{ needs.release.outputs.next_version }}
+        run: echo "$OUTPUT"
   
