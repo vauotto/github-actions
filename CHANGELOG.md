@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.5.5](https://github.com/vauotto/github-actions/compare/v1.5.4...v1.5.5) (2024-02-16)
+
+
+### Bug Fixes
+
+* bla ([091c436](https://github.com/vauotto/github-actions/commit/091c4364ce7c12c34fef1f4e867a1ab71ada9efd))
+
 ## [1.5.4](https://github.com/vauotto/github-actions/compare/v1.5.3...v1.5.4) (2024-02-16)
 
 
